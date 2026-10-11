@@ -1,0 +1,34 @@
+{
+  "school": "示例大学",
+  "platform": "zhixun",
+  "base_url": "https://erke.example.edu.cn/public/index.php",
+  "campus_name": "中心校区",
+  "college_name": "计算机学院",
+  "filter": {
+    "campus_ids": [
+      4
+    ],
+    "campus_keywords": [
+      "中心校区"
+    ],
+    "college_ids": [
+      18
+    ],
+    "college_keywords": [
+      "计算机学院"
+    ],
+    "audience_keywords": [
+      "全体新生"
+    ],
+    "open_status": [
+      "ongoing",
+      "waiting"
+    ],
+    "closed_status": [
+      "ended"
+    ]
+  },
+  "email": {
+    "enabled": false
+  }
+}

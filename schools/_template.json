@@ -1,0 +1,75 @@
+{
+  "_hint": "复制这份文件改名成 你的学校.json 再填。带 _hint 的键是说明，填完后可以删掉。",
+
+  "school": "你的学校全称",
+  "platform": "zhixun",
+  "_hint_platform": "职迅填 zhixun；趣拓填 qutuo；都不是填 generic",
+
+  "base_url": "https://erke.你的学校.edu.cn/public/index.php",
+  "_hint_base_url": "企微里打开第二课堂，复制地址栏，通常截到 /public/index.php 为止",
+
+  "campus_name": "你的校区名",
+  "college_name": "你的学院名",
+  "max_page": 50,
+  "_hint_max_page": "接口有多少页就填多大，宁大勿小，小了会漏活动",
+
+  "links": {
+    "detail_url": "{base_url}/mobile/activity-detail?id={id}"
+  },
+  "_hint_links": "活动详情页模板，{base_url} 和 {id} 会被替换。拿不到就整段删掉",
+
+  "api": {
+    "activity_path": "/api/student/activity",
+    "college_path": "/api/student/college",
+    "page_param": "page",
+    "items_path": "result.data",
+    "last_page_path": "result.last_page",
+    "auth_scheme": "Bearer"
+  },
+  "_hint_api": "跑 python configure.py 会自动探测；探测不出来就按 ADAPT.md 抓包",
+
+  "token": {
+    "file": "token.txt",
+    "host_hint": "erke.你的学校.edu.cn",
+    "key_names": ["student-token"],
+    "regex": "[0-9]{3,12}\\|[A-Za-z0-9]{10,80}",
+    "env": "CAMPUS_TOKEN"
+  },
+  "_hint_token": "host_hint 填域名，用来从企微缓存里筛出本校的 token",
+
+  "filter": {
+    "campus_field": "campus_id",
+    "campus_ids": [4],
+    "campus_keywords": ["你的校区名"],
+    "_hint_campus": "ID 和关键词都填：字段会错，关键词是兜底",
+
+    "audience_fields": ["apply_college_limit"],
+    "college_ids": [18],
+    "college_keywords": ["你的学院名"],
+    "audience_keywords": ["全体新生"],
+    "_hint_audience": "有些活动不限学院，只有靠正文里的学院名才能捞出来",
+
+    "major_fields": [],
+    "major_keywords": [],
+    "major_exclude_keywords": [],
+    "_hint_major": "你的专业名填 major_keywords；明确限别的专业的短语填 major_exclude_keywords；都留空则不过滤",
+
+    "status_field": "apply_status",
+    "open_status": ["ongoing", "waiting"],
+    "closed_status": ["ended"],
+
+    "exclude_ids": [],
+    "exclude_keywords": [],
+    "_hint_exclude": "不提醒名单：填活动 id 或标题关键词，命中就彻底不出现（删掉即恢复）"
+  },
+
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "user": "",
+    "password": "",
+    "to": []
+  },
+  "_hint_email": "password 是 SMTP 授权码不是登录密码；to 是数组，会给每个地址单独发一封"
+}

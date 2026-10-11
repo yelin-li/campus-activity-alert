@@ -1,0 +1,60 @@
+{
+  "school": "你的学校",
+  "platform": "zhixun",
+  "base_url": "https://erke.你的学校.edu.cn/public/index.php",
+  "campus_name": "你所在的校区",
+  "college_name": "你的学院",
+  "max_page": 10,
+
+  "api": {
+    "activity_path": "/api/student/activity",
+    "college_path": "/api/student/college",
+    "page_param": "page",
+    "items_path": "result.data",
+    "last_page_path": "result.last_page",
+    "auth_scheme": "Bearer"
+  },
+
+  "links": {
+    "detail_url": "{base_url}/mobile/activity-detail?id={id}",
+    "note": "活动详情页直达链接模板，{base_url} 和 {id} 会被自动替换。链接会出现在报告和邮件里，方便直接点开报名。不知道就先删掉这项，报告会退化成不带链接。"
+  },
+
+  "token": {
+    "file": "token.txt",
+    "host_hint": "erke.你的学校.edu.cn",
+    "key_names": ["student-token"],
+    "regex": "[0-9]{3,12}\\|[A-Za-z0-9]{10,80}",
+    "env": "CAMPUS_TOKEN"
+  },
+
+  "filter": {
+    "campus_field": "campus_id",
+    "campus_ids": [4],
+    "campus_keywords": ["你所在的校区"],
+
+    "audience_fields": ["apply_college_limit"],
+    "college_ids": [18],
+    "college_keywords": ["你的学院"],
+    "audience_keywords": ["全体新生"],
+
+    "major_keywords": ["你的专业"],
+    "major_exclude_keywords": [],
+
+    "status_field": "apply_status",
+    "open_status": ["ongoing", "waiting"],
+    "closed_status": ["ended"],
+
+    "exclude_ids": [],
+    "exclude_keywords": []
+  },
+
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "user": "你的邮箱@qq.com",
+    "password": "SMTP授权码，不是登录密码",
+    "to": ["收件人@qq.com"]
+  }
+}

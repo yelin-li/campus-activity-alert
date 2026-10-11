@@ -1,0 +1,66 @@
+{
+  "school": "示例大学",
+  "platform": "zhixun",
+  "base_url": "https://erke.example.edu.cn/public/index.php",
+  "campus_name": "中心校区",
+  "college_name": "计算机学院",
+  "max_page": 50,
+
+  "api": {
+    "activity_path": "/api/student/activity",
+    "college_path": "/api/student/college",
+    "page_param": "page",
+    "items_path": "result.data",
+    "last_page_path": "result.last_page",
+    "auth_scheme": "Bearer"
+  },
+
+  "links": {
+    "detail_url": "{base_url}/mobile/activity-detail?id={id}"
+  },
+
+  "token": {
+    "file": "token.txt",
+    "host_hint": "erke.example.edu.cn",
+    "key_names": ["student-token"],
+    "regex": "[0-9]{3,12}\\|[A-Za-z0-9]{10,80}",
+    "env": "CAMPUS_TOKEN"
+  },
+
+  "filter": {
+    "campus_field": "campus_id",
+    "campus_ids": [4],
+    "campus_keywords": ["中心校区"],
+
+    "audience_fields": ["apply_college_limit"],
+    "college_ids": [18, 34],
+    "college_keywords": ["计算机学院"],
+    "audience_keywords": ["全体新生", "2026级新生", "2026级"],
+
+    "major_fields": ["apply_major_limit", "apply_entry_limit"],
+    "major_keywords": [],
+    "major_exclude_keywords": [],
+
+    "status_field": "apply_status",
+    "open_status": ["ongoing", "waiting"],
+    "closed_status": ["ended"],
+
+    "exclude_ids": [],
+    "exclude_keywords": []
+  },
+
+  "exclude_note": "不提醒名单（默认空，不屏蔽任何活动）：想屏蔽时，exclude_ids 填活动 id、exclude_keywords 填标题关键词，命中后彻底不出现在报告和邮件里（连「校区内其他」也不列），删掉即恢复。已结束的活动不需要手动屏蔽——apply_status 变成 ended 后会自动从命中列表消失。",
+
+  "major_note": "把你的专业名填进 major_keywords（例如「法学」），正文出现就算与你相关；major_exclude_keywords 填明确限别的专业的短语（例如「限土地资源管理专业」），命中就排除。两个都留空 = 不做专业过滤，只按学院和校区筛。某高校接口没有独立的专业字段，专业限制只写在正文里。",
+
+  "note": "campus_id 字段偶有错误（例如社团魅力夜节目海选标成 1，实际在中心），所以必须同时用正文「中心校区」兜底。",
+
+  "email": {
+    "enabled": false,
+    "smtp_host": "smtp.qq.com",
+    "smtp_port": 465,
+    "user": "",
+    "password": "",
+    "to": []
+  }
+}

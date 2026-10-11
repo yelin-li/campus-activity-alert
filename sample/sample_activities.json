@@ -1,0 +1,91 @@
+[
+  {
+    "id": 1001,
+    "name": "校园歌手大赛节目海选",
+    "host": "校团委（中心校区）",
+    "address": "学生活动中心内三厅",
+    "content": "仅限中心校区同学报名，欢迎各学院同学参加。",
+    "campus_id": 4,
+    "apply_status": "waiting",
+    "started_at": "2026-10-15 14:00",
+    "apply_started_at": "2026-10-13 09:00",
+    "apply_ended_at": "2026-10-15 13:55",
+    "apply_college_limit": [
+      {"id": 18, "name": "计算机学院"},
+      {"id": 20, "name": "数学与统计学院"}
+    ],
+    "contact": "李同学 13800000001"
+  },
+  {
+    "id": 1002,
+    "name": "2026级新生志愿服务周",
+    "host": "青年志愿者协会",
+    "address": "中心校区活动场地",
+    "content": "面向全体新生招募志愿者，中心校区开展。",
+    "campus_id": 4,
+    "apply_status": "ongoing",
+    "started_at": "2026-10-20 09:00",
+    "apply_started_at": "2026-10-15 08:00",
+    "apply_ended_at": "2026-10-18 22:00",
+    "apply_college_limit": [],
+    "contact": "王同学 13800000002"
+  },
+  {
+    "id": 1003,
+    "name": "数院观影《南京照相馆》",
+    "host": "数学与统计学院",
+    "address": "教学楼 110",
+    "content": "仅限数学与统计学院同学报名，中心校区。",
+    "campus_id": 4,
+    "apply_status": "ongoing",
+    "started_at": "2026-10-16 18:40",
+    "apply_ended_at": "2026-10-16 12:00",
+    "apply_college_limit": [
+      {"id": 20, "name": "数学与统计学院"}
+    ],
+    "contact": "赵同学 13800000003"
+  },
+  {
+    "id": 1004,
+    "name": "迎新晚会工作人员招募",
+    "host": "校团委（中心校区）",
+    "address": "内三外厅",
+    "content": "中心校区迎新晚会，招募工作人员 100 人。",
+    "campus_id": 4,
+    "apply_status": "ended",
+    "started_at": "2026-09-28 19:00",
+    "apply_ended_at": "2026-09-27 18:00",
+    "apply_college_limit": [
+      {"id": 18, "name": "计算机学院"}
+    ],
+    "contact": "孙同学 13800000004"
+  },
+  {
+    "id": 1005,
+    "name": "职业规划系列讲座",
+    "host": "就业指导中心",
+    "address": "东校区校区大讲堂",
+    "content": "面向计算机学院同学，地点在东校区校区。",
+    "campus_id": 1,
+    "apply_status": "ongoing",
+    "started_at": "2026-10-22 14:30",
+    "apply_ended_at": "2026-10-21 18:00",
+    "apply_college_limit": [
+      {"id": 18, "name": "计算机学院"}
+    ],
+    "contact": "周老师 13800000005"
+  },
+  {
+    "id": 1006,
+    "name": "线上主题征文活动",
+    "host": "党委宣传部",
+    "address": "线上",
+    "content": "面向全体新生，线上提交，不限校区。",
+    "campus_id": 0,
+    "apply_status": "ongoing",
+    "started_at": "2026-10-12 00:00",
+    "apply_ended_at": "2026-11-05 23:59",
+    "apply_college_limit": [],
+    "contact": "吴老师 13800000006"
+  }
+]
